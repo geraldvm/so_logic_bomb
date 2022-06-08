@@ -21,7 +21,7 @@ def plotCPU(listX, listY):
     plt.subplots_adjust(left=0.12, bottom=0.214, right=1, top=0.912, wspace=1, hspace=1)
     ax.set_xlabel('CPU Time')
     ax.set_ylabel('CPU Usage')
-    ax.set_yticks(np.arange(0,100,10))
+    ax.set_yticks(np.arange(0,110,10))
 
     plt.show()
 
