@@ -8,7 +8,7 @@ def getCPU_usage():
     list_y=[]
     list_x=[]
     for x in range(5):
-        list_y+=[psutil.cpu_percent(interval=5, percpu=False)]
+        list_y+=[psutil.cpu_percent(interval=10, percpu=False)]
         list_x+=[x*10]
     print(list_y)
     return list_x, list_y
@@ -27,7 +27,7 @@ def plotCPU(listX, listY):
 
 def plotPieCPU():
     labels = 'CPU Usage', 'Free'
-    usage = psutil.cpu_percent(interval=5, percpu=False)
+    usage = psutil.cpu_percent(interval=10, percpu=False)
     sizes = [usage,100 - usage]
     fig1, ax1 = plt.subplots()
     explode = (0.1, 0)  # only "explode" the 1st slice (i.e. 'CPU Usage')
